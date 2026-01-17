@@ -6,9 +6,24 @@ export default async function handler(req, res) {
     }
 
     // Проверяем наличие API ключа
-    const apiKey = process.env.API_KEY;
+    // Пробуем разные варианты названий переменных окружения
+    const apiKey = process.env.API_KEY || process.env.OPENAI_API_KEY || process.env.VITE_OPENAI_API_KEY;
+    
     if (!apiKey) {
-        return res.status(500).json({ error: 'API key not configured' });
+        console.error('API key not found in environment variables');
+        return res.status(500).json({ 
+            error: 'API key not configured',
+            details: 'Check that API_KEY is set in Vercel environment variables'
+        });
+    }
+    
+    // Проверяем формат ключа (должен начинаться с sk-)
+    if (!apiKey.startsWith('sk-')) {
+        console.error('Invalid API key format');
+        return res.status(500).json({ 
+            error: 'Invalid API key format',
+            details: 'API key should start with sk-'
+        });
     }
 
     try {
@@ -32,8 +47,11 @@ export default async function handler(req, res) {
 
         if (!response.ok) {
             const errorData = await response.json().catch(() => ({}));
+            console.error('OpenAI API error:', response.status, errorData);
             return res.status(response.status).json({ 
-                error: errorData.error?.message || 'OpenAI API error' 
+                error: errorData.error?.message || 'OpenAI API error',
+                status: response.status,
+                details: errorData
             });
         }
 
