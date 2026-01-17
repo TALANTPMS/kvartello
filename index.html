@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Чат Лендинг</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="descriptor">Дескриптор</h1>
+                    <p class="description">Краткое описание продукта или услуги</p>
+                </div>
+                <div class="header-right">
+                    <span class="phone">000000000</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Body -->
+    <main class="body">
+        <div class="wrapper">
+            <!-- Заголовок и подзаголовок -->
+            <div class="text-content">
+                <h2 class="main-title">Заголовок</h2>
+                <p class="title-description">
+                    *Цель заголовка — удержать внимание пользователя, раскрыть ключевое УТП и заставить его остановиться на странице
+                </p>
+                <h3 class="subtitle">Подзаголовок</h3>
+                <p class="subtitle-description">
+                    *Цель подзаголовка — раскрыть «заголовок», усилить его и сформировать 
+                    призыв к действию, а именно — побудить пользователя 
+                    к началу общения с AI-консультантом
+                </p>
+            </div>
+
+            <!-- Чат окно -->
+            <div class="chat-window">
+                <div class="chat-avatar">
+                    <div class="avatar-placeholder">
+                        <div class="online-indicator"></div>
+                    </div>
+                </div>
+                <div class="chat-content-area">
+                    <div class="chat-messages" id="chatMessages"></div>
+                    <div class="chat-input-area">
+                        <form id="chatForm" class="chat-form">
+                            <input type="text" class="chat-input" id="chatInput" placeholder="Введите ваш вопрос..." autocomplete="off">
+                            <button type="submit" class="chat-send-btn" id="sendBtn" aria-label="Отправить">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 12L21 3L12 21L11 13L3 12Z" fill="white"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <div class="footer-column">Ссылки</div>
+                <div class="footer-column">Инфо о компании</div>
+                <div class="footer-column">Контакты для связи</div>
+            </div>
+        </div>
+    </footer>
+    <script src="chat.js"></script>
+</body>
+</html>
+
