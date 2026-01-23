@@ -808,6 +808,7 @@ body {
     .option-button {
         font-size: 16px;
         padding: 16px 20px;
+        width: 50%;
     }
 
     .messenger-button {
