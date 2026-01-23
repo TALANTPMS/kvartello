@@ -348,9 +348,9 @@ function showStartQuestions() {
     questionsContainer.className = 'start-questions-container';
     
     const questions = [
-        'Якорный вопрос',
-        'Якорный вопрос',
-        'Якорный вопрос',
+        'Сколько стоит ремонт квартиры?',
+        'Какие гарантии вы даете?',
+        'Вы используете свои материалы или я могу их купить?',
         'Хочу задать свой вопрос'
     ];
     
