@@ -716,6 +716,14 @@ body {
 
 /* Media Query: min-width 1024px */
 @media (min-width: 1024px) {
+    .messengers-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .start-questions-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     .buttons-container{
         flex-direction: row;
         flex-wrap: wrap;
@@ -807,6 +815,7 @@ body {
     .start-question-btn {
         font-size: 16px;
         padding: 16px 20px;
+        width: 47%;
     }
 
     .option-button {
@@ -818,6 +827,7 @@ body {
     .messenger-button {
         font-size: 16px;
         padding: 16px 20px;
+        width: 47%;
     }
 
     .name-input,
