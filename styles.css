@@ -716,6 +716,10 @@ body {
 
 /* Media Query: min-width 1024px */
 @media (min-width: 1024px) {
+    .buttons-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     .wrapper {
         max-width: 970px;
         padding: 0 15px;
@@ -808,7 +812,7 @@ body {
     .option-button {
         font-size: 16px;
         padding: 16px 20px;
-        width: 50%;
+        width: 47%;
     }
 
     .messenger-button {
