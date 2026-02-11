@@ -95,7 +95,7 @@ body {
 
 .title-description {
     font-size: 16px;
-    color: #3d3d3d; /* Сделали белым (был черный) */
+    color: #000000; /* Сделали белым (был черный) */
     margin-bottom: 20px;
     text-align: center;
 }
