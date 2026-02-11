@@ -12,7 +12,7 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #f7f7f7;
+    color: #2C3244;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -86,7 +86,7 @@ body {
 
 .title-description {
     font-size: 16px;
-    color: #e9e9e9;
+    color: #000000;
     margin-bottom: 20px;
     text-align: center;
 }
