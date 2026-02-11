@@ -41,12 +41,15 @@ body {
 }
 
 .header-left {
+    display: flex;
+    align-items: center; /* Выравниваем лого и текст по одной линии */
+    gap: 15px;
     text-align: left;
 }
 
 .site-logo {
-    height: 30px;
-    margin-bottom: 8px;
+    height: 40px; /* Фиксируем высоту для ровности */
+    margin-bottom: 0; /* Убираем отступ снизу */
 }
 
 .descriptor {
@@ -57,17 +60,19 @@ body {
 
 .description {
     font-size: 14px;
-    color: #666;
+    color: #ffffff; /* Сделал белым, так как фон теперь темный */
+    margin: 0;
 }
 
 .header-right {
-    text-align: left;
+    display: flex;
+    align-items: center;
 }
-
 .phone {
     font-size: 16px;
     font-weight: 500;
-    color: #000000; /* Сделали черным */
+    color: #000000; /* Как вы просили — черный */
+    white-space: nowrap;
 }
 
 /* Body */
@@ -133,8 +138,9 @@ body {
     height: 40px;
     background-color: #ddd;
     border-radius: 50%;
-    position: relative;
-    overflow: hidden;
+    position: relative; /* Оставляем для привязки индикатора */
+    overflow: visible;   /* ВАЖНО: меняем с hidden на visible, чтобы индикатор не обрезался */
+    z-index: 1;
 }
 
 .avatar-image {
@@ -155,6 +161,7 @@ body {
     border: 2px solid white;
     border-radius: 50%;
     animation: pulse 2s infinite;
+    z-index: 10; /* Поднимаем выше изображения */
 }
 
 @keyframes pulse {
@@ -592,9 +599,11 @@ body {
     }
 
     .header-content {
-        flex-direction: row;
+        display: flex;
+        flex-direction: row; /* Выстраиваем в ряд на всех устройствах */
         justify-content: space-between;
-        align-items: center;
+        align-items: center; /* Центрируем по вертикали */
+        gap: 15px;
     }
 
     .header-right {
