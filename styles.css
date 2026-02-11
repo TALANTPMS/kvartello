@@ -43,7 +43,7 @@ body {
 }
 
 .site-logo {
-    height: 80px;
+    height: 40px;
     margin-bottom: 8px;
 }
 
@@ -581,6 +581,9 @@ body {
         margin: 0 auto;
         padding: 0 12px;
     }
+    .site-logo {
+        height: 80px;
+    }
 
     .header-content {
         flex-direction: row;
@@ -737,6 +740,9 @@ body {
     .messengers-container {
         flex-direction: row;
         flex-wrap: wrap;
+    }
+    .site-logo {
+        height: 100px;
     }
     .start-questions-container {
         flex-direction: row;
@@ -903,7 +909,9 @@ body {
         padding: 0 20px;
         max-width: 1200px;
     }
-
+    .site-logo {
+        height: 120px;
+    }
     .header {
         padding: 30px 0;
     }
