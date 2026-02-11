@@ -12,7 +12,7 @@ html {
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #f7f7f7;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -43,7 +43,7 @@ body {
 }
 
 .site-logo {
-    height: 40px;
+    height: 30px;
     margin-bottom: 8px;
 }
 
@@ -86,7 +86,7 @@ body {
 
 .title-description {
     font-size: 16px;
-    color: #000000;
+    color: #e9e9e9;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -100,7 +100,7 @@ body {
 
 .subtitle-description {
     font-size: 14px;
-    color: #646464;
+    color: #ffffff;
 }
 
 /* Chat Window */
@@ -548,7 +548,7 @@ body {
 /* Текст про якорные вопросы (после стартовых вопросов) */
 .anchor-text-small {
     font-size: 11px;
-    color: #ffffff;
+    color: #777777;
     line-height: 1.6;
     margin-top: 12px;
     padding: 0 4px;
@@ -580,9 +580,10 @@ body {
         max-width: 720px;
         margin: 0 auto;
         padding: 0 12px;
+        color: #2C3244;
     }
     .site-logo {
-        height: 80px;
+        height: 30px;
     }
 
     .header-content {
@@ -742,7 +743,7 @@ body {
         flex-wrap: wrap;
     }
     .site-logo {
-        height: 100px;
+        height: 40px;
     }
     .start-questions-container {
         flex-direction: row;
@@ -910,7 +911,7 @@ body {
         max-width: 1200px;
     }
     .site-logo {
-        height: 120px;
+        height: 50px;
     }
     .header {
         padding: 30px 0;
