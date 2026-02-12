@@ -574,8 +574,8 @@ body {
 /* Footer */
 .footer {
     padding: 10px 0;
-    background-color: rgba(255, 255, 255, 0.05); /* Делаем его полупрозрачным */
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: #ffffff; /* Делаем его полупрозрачным */
+    border-top: 1px solid #e0e0e0;
 }
 
 .footer-content {
