@@ -574,20 +574,22 @@ body {
 /* Footer */
 .footer {
     padding: 10px 0;
-    border-top: 1px solid #e0e0e0;
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.05); /* Делаем его полупрозрачным */
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .footer-content {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;      /* В одну строку даже на мобильных */
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;        /* Запрещаем перенос */
 }
 
 .footer-column {
-    text-align: center;
-    font-size: 14px;
-    color: #666;
+    font-size: 10px;          /* Делаем текст мелким, чтобы не мешал */
+    color: rgba(255, 255, 255, 0.6);
+    white-space: nowrap;      /* Текст в одну линию */
 }
 
 /* Media Query: min-width 768px */
@@ -757,7 +759,8 @@ body {
     }
 
     .footer-column {
-        font-size: 15px;
+        font-size: 14px;
+        gap: 20px;
     }
 }
 
