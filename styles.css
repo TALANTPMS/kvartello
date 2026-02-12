@@ -30,25 +30,25 @@ body {
 /* Header */
 .header {
     padding: 20px 0;
-    border-bottom: 1px solid #e0e0e0;
-    background-color: #ffffff;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Тонкая линия на темном фоне */
 }
 
 .header-content {
     display: flex;
-    flex-direction: column;
-    gap: 15px;
+    flex-direction: column; /* По умолчанию в столбик (для мобилок) */
+    align-items: center;    /* Центрируем всё в столбике */
+    gap: 10px;
+    position: relative;     /* Нужно для позиционирования десктопного центра */
 }
 
 .header-left {
-    flex: 1;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;    /* Центрируем лого и описание на мобилках */
 }
 
 .site-logo {
-    height: 40px; /* Фиксируем высоту для ровности */
+    height: 20px; /* Фиксируем высоту для ровности */
     margin-bottom: 0; /* Убираем отступ снизу */
 }
 
@@ -59,22 +59,23 @@ body {
 }
 
 .description {
-    flex: 2; /* Занимает центральную часть */
-    text-align: center;
     font-size: 14px;
-    color: #000000; /* черный текст на белом фоне */
+    color: #ffffff;         /* Белый текст */
     margin: 0;
+    text-align: center;
 }
 
 .header-right {
-    flex: 1;
-    display: flex;
-    justify-content: flex-end;
+    text-align: center;
 }
+
 .phone {
-    color: #000000; /* Черный номер телефона */
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
+    color: #000000;         /* Черный номер телефона */
+    background: #ffffff;    /* Белая подложка, если нужно, чтобы на темном фоне он был виден как черный */
+    padding: 2px 8px;
+    border-radius: 4px;
 }
 
 /* Body */
@@ -571,7 +572,7 @@ body {
 
 /* Footer */
 .footer {
-    padding: 30px 0;
+    padding: 10px 0;
     border-top: 1px solid #e0e0e0;
     background-color: #f9f9f9;
 }
@@ -598,14 +599,17 @@ body {
     }
     .site-logo {
         height: 30px;
+        margin-bottom: 0;
+    }
+    .header-left {
+        flex-direction: row;      /* Логотип слева */
+        align-items: center;
     }
 
     .header-content {
-        display: flex;
-        flex-direction: row;
+        flex-direction: row;      /* В одну линию */
         justify-content: space-between;
         align-items: center;
-        width: 100%;
     }
 
     .header-right {
@@ -617,7 +621,11 @@ body {
     }
 
     .description {
-        font-size: 15px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
     }
 
     .phone {
