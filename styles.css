@@ -61,7 +61,7 @@ body {
 
 .description {
     font-size: 14px;
-    color: #ffffff;         /* Белый текст */
+    color: #000000;         /* Белый текст */
     margin: 0;
     text-align: center;
 }
